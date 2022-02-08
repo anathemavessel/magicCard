@@ -12,7 +12,7 @@
 
 body {
   min-height: 100vh;
-  background: #212534;
+  background: linear-gradient(to bottom, #000, #0E0E0E);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -23,9 +23,10 @@ body {
 
 
 .card {
-   background-image: url("https://i.pinimg.com/474x/59/ca/81/59ca81716ed8bbca7245475edd251a33.jpg");
+  background-image: url("https://i.pinimg.com/474x/59/ca/81/59ca81716ed8bbca7245475edd251a33.jpg");
   width: 380px;
-  height: 520px;
+  flex-direction: column;
+  height: 500px;
   padding: 3px;
   position: relative;
   border-radius: 6px;
@@ -40,19 +41,14 @@ body {
 }
 
 .card:hover {
-  color: #27436F;
-  text-shadow: 3px 3px 8px #000;
-  transition: color 1s;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background: #ADCDF3;
+  color: #000;
+  transition: all 1s;
+  background: linear-gradient(45deg,  #1AC5F1, #01A2D8, #1E457C);
 }
 .card:hover:before, .card:hover:after {
   animation: none;
   opacity: 0;
 }
-
 
 .card::before {
   content: "";
@@ -61,12 +57,12 @@ body {
   border-radius: 8px;
   background-image: linear-gradient(
     var(--rotate)
-    , #5ddcff, #E5ADEC, #FF00F7);
+    , #BF9EE5, #A769CC, #A62A8C);
     position: absolute;
     z-index: -1;
     top: -1%;
     left: -2%;
-    animation: spin 2.5s linear infinite;
+    animation: spin 2s linear infinite;
 }
 
 .card::after {
@@ -79,14 +75,14 @@ body {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  transform: scale(0.8);
+  transform: scale(1.2);
   filter: blur(calc(var(--card-height) / 6));
   background-image: linear-gradient(
     var(--rotate)
-    , #5ddcff, #E5ADEC, #FF00F7);
+    , #2C2584, #2C2584, #7587DB);
     opacity: 1;
   transition: opacity .5s;
-  animation: spin 2.5s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
@@ -105,6 +101,22 @@ a {
   font-family: 'Bebas Neue', cursive;
   margin-top: 2rem;
 }
-h4 {
+a:hover{
+  color: #000;
+  font-size: 60px;
+  transition: all 0.8s;
+  text-decoration: none;
   font-family: 'Bebas Neue', cursive;
+  margin-top: 2rem;
+}
+.card h4 {
+  font-family: 'Bebas Neue', cursive;
+  position: sticky;
+  font-size: 30px;
+}
+.card h3 {
+  position: relative;
+  width: 300px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
 }
