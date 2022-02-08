@@ -23,9 +23,9 @@ body {
 
 
 .card {
-  background: #191c29;
-  width: var(--card-width);
-  height: var(--card-height);
+   background-image: url("https://i.pinimg.com/474x/59/ca/81/59ca81716ed8bbca7245475edd251a33.jpg");
+  width: 380px;
+  height: 520px;
   padding: 3px;
   position: relative;
   border-radius: 6px;
@@ -40,8 +40,13 @@ body {
 }
 
 .card:hover {
-  color: rgb(88 199 250 / 100%);
+  color: #27436F;
+  text-shadow: 3px 3px 8px #000;
   transition: color 1s;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: #ADCDF3;
 }
 .card:hover:before, .card:hover:after {
   animation: none;
@@ -56,7 +61,7 @@ body {
   border-radius: 8px;
   background-image: linear-gradient(
     var(--rotate)
-    , #5ddcff, #3c67e3 43%, #4e00c2);
+    , #5ddcff, #E5ADEC, #FF00F7);
     position: absolute;
     z-index: -1;
     top: -1%;
@@ -78,7 +83,7 @@ body {
   filter: blur(calc(var(--card-height) / 6));
   background-image: linear-gradient(
     var(--rotate)
-    , #5ddcff, #3c67e3 43%, #4e00c2);
+    , #5ddcff, #E5ADEC, #FF00F7);
     opacity: 1;
   transition: opacity .5s;
   animation: spin 2.5s linear infinite;
@@ -94,9 +99,12 @@ body {
 }
 
 a {
-  color: #212534;
+  color: #FFF;
+  font-size: 45px;
   text-decoration: none;
-  font-family: sans-serif;
-  font-weight: bold;
+  font-family: 'Bebas Neue', cursive;
   margin-top: 2rem;
+}
+h4 {
+  font-family: 'Bebas Neue', cursive;
 }
